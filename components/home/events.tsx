@@ -4,7 +4,7 @@ import PageSection from "../shared/page-section";
 import SectionTitle from "../shared/section-title";
 import { EVENTS } from "@/constants/events";
 import Image from "next/image";
-import { Calendar1Icon } from "lucide-react";
+import { Calendar1Icon, ChevronLeft, ChevronRight } from "lucide-react";
 import { IoLocation } from "react-icons/io5";
 import CountdownTimer from "./countdown-timer";
 import PrimaryButton from "../shared/primary-button";
@@ -40,7 +40,7 @@ const Events = () => {
         label="Moments Worth Looking Forward To"
         className="text-center"
       />
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
         <div className="rounded-lg overflow-hidden object-center relative">
           <Image
             src={activeEvent.image}
@@ -100,20 +100,28 @@ const Events = () => {
             </p>
             <CountdownTimer targetDate={activeEvent.date} />
           </div>
-          <div className="flex items-center justify-end gap-4 mt-auto">
+          <div className="flex items-center justify-between md:justify-end gap-4 mt-auto">
             <PrimaryButton onClick={handlePrev} disabled={isFirst}>
-              Previous
+              <div className="flex items-center gap-2">
+                <ChevronLeft />
+                <span className="max-sm:hidden">Previous</span>
+              </div>
             </PrimaryButton>
-            {Array.from({ length: EVENTS.length }).map((_, i) => (
-              <div
-                key={i}
-                className={`size-4 rounded-full border border-primary-blue ${
-                  i === activeIndex ? "bg-primary-blue" : ""
-                }`}
-              ></div>
-            ))}
+            <div className="flex items-center gap-2">
+              {Array.from({ length: EVENTS.length }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`size-3 rounded-full border border-primary-blue ${
+                    i === activeIndex ? "bg-primary-blue" : ""
+                  }`}
+                ></div>
+              ))}
+            </div>
             <PrimaryButton onClick={handleNext} disabled={isLast}>
-              Next
+              <div className="flex items-center gap-2">
+                <span className="max-sm:hidden">Next</span>
+                <ChevronRight />
+              </div>
             </PrimaryButton>
           </div>
         </div>

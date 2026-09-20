@@ -1,7 +1,21 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import PageSection from "../shared/page-section";
 
 export default function Cta() {
+  const pathname = usePathname();
+
+  // Avoid duplicating the CTA on admissions/apply pages where FinalAdmissionsCta is explicitly rendered
+  if (
+    pathname === "/admissions" ||
+    pathname === "/apply" ||
+    pathname === "/apply-now"
+  ) {
+    return null;
+  }
+
   return (
     <PageSection>
       <div className="relative overflow-hidden rounded-3xl bg-primary-dark-blue px-6 py-16 text-center md:px-12 md:py-20">

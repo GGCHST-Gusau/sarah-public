@@ -31,8 +31,8 @@ const AboutHero = () => {
           <div className="grid aspect-[1.08] grid-cols-2 gap-3">
             {[
               { src: about_img, className: "rounded-tl-[100px]" },
-              { src: about_img2, className: "rounded-tr-[28px]" },
-              { src: about_img3, className: "rounded-bl-[28px]" },
+              { src: about_img2, className: "rounded-tr-[16px]" },
+              { src: about_img3, className: "rounded-bl-[16px]" },
               { src: about_img4, className: "rounded-br-[100px]" },
             ].map(({ src, className }, index) => (
               <div

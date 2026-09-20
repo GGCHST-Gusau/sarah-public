@@ -11,7 +11,7 @@ const PrimaryButton = ({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`py-2  px-6 rounded-sm text-white bg-primary-blue font-medium ${
+      className={`py-2 px-4 rounded-sm text-white bg-primary-blue font-medium ${
         disabled ? "opacity-40 cursor-not-allowed!" : ""
       }`}
     >

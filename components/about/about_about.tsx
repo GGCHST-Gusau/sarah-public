@@ -7,13 +7,18 @@ import SectionTitle from "../shared/section-title";
 const AboutAbout = () => {
   return (
     <PageSection>
-      <div className="relative flex items-center justify-between gap-6 flex-col-reverse lg:flex-row-reverse xl:gap-24">
+      <SectionTitle
+        title="Who We Are"
+        label="A Place to Learn, Grow, and Belong"
+        className="lg:hidden"
+      />
+      <div className="relative flex items-center justify-between gap-6 flex-col-reverse lg:flex-row xl:gap-24">
         <div className="flex w-full grow-0 flex-col items-start gap-4">
           <SectionTitle
             title="Who We Are"
             label="A Place to Learn, Grow, and Belong"
+            className="max-lg:hidden"
           />
-
           <div className="space-y-4 leading-7 md:text-lg">
             <p>
               Our school provides a supportive and engaging environment where
@@ -44,7 +49,8 @@ const AboutAbout = () => {
           </a>
         </div>
 
-        <div className="relative w-full lg:w-1/3 xl:w-1/2 max-w-150 shrink-0">
+        <div className="relative w-full lg:w-1/2 max-w-150 shrink-0">
+          {/* <div className="absolute -bottom-6 -right-6 hidden h-28 w-28 rounded-2xl bg-secondary-gold/20 md:block" /> */}
           <div className="aspect-4/3 overflow-hidden rounded-3xl">
             <Image
               src={images.about_about}
@@ -52,8 +58,6 @@ const AboutAbout = () => {
               className="h-full w-full object-cover"
             />
           </div>
-
-          <div className="absolute -bottom-6 -right-6 hidden h-28 w-28 rounded-2xl bg-secondary-gold/20 md:block" />
         </div>
       </div>
     </PageSection>

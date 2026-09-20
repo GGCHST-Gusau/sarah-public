@@ -53,7 +53,7 @@ export default function CountdownTimer({ targetDate }: CountdownProps) {
 
   return (
     <div className="flex items-center gap-2 font-mono font-bold text-primary-blue">
-      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-16 rounded">
+      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-12 rounded">
         <span className="text-lg">
           {String(timeLeft.days).padStart(2, "0")}
         </span>
@@ -62,7 +62,7 @@ export default function CountdownTimer({ targetDate }: CountdownProps) {
         </span>
       </div>
       <span>:</span>
-      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-16 rounded">
+      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-12 rounded">
         <span className="text-lg">
           {String(timeLeft.hours).padStart(2, "0")}
         </span>
@@ -71,7 +71,7 @@ export default function CountdownTimer({ targetDate }: CountdownProps) {
         </span>
       </div>
       <span>:</span>
-      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-16 rounded">
+      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-12 rounded">
         <span className="text-lg">
           {String(timeLeft.minutes).padStart(2, "0")}
         </span>
@@ -80,7 +80,7 @@ export default function CountdownTimer({ targetDate }: CountdownProps) {
         </span>
       </div>
       <span>:</span>
-      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-16 rounded">
+      <div className="flex flex-col items-center justify-center bg-secondary-gold/10 size-12 rounded">
         <span className="text-lg">
           {String(timeLeft.seconds).padStart(2, "0")}
         </span>

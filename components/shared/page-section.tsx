@@ -4,10 +4,11 @@ interface Props {
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  id?: string;
 }
-const PageSection = ({ children, className, style }: Props) => {
+const PageSection = ({ children, className, style, id }: Props) => {
   return (
-    <section style={style} className={`py-16 md:py-24 ${className}`}>
+    <section id={id} style={style} className={`py-16 md:py-24 ${className}`}>
       <div className="container flex flex-col gap-6 md:gap-12">
         {/* <div className="flex flex-col text-center gap-1">
           <h2 className="uppercase font-bold tracking-wider text-primary-blue">
